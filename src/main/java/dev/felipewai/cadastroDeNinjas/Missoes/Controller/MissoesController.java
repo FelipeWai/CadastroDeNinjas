@@ -30,17 +30,17 @@ public class MissoesController {
     }
 
     @PostMapping("/criar")
-    public MissoesModel criarMissao(MissoesModel missao){
+    public MissoesModel criarMissao(@RequestBody MissoesModel missao){
         return missoesService.criarMissao(missao);
     }
 
     @PutMapping("/atualizar/{id}")
-    public String atualizarMissao(@PathVariable Long id, @RequestBody MissoesModel missao){
-        return null;
+    public MissoesModel atualizarMissao(@PathVariable Long id, @RequestBody MissoesModel missao){
+        return missoesService.atualizarMissoesPorId(id, missao);
     }
 
     @DeleteMapping("/deletar/{id}")
-    public void deletarMissao(Long id){
+    public void deletarMissao(@PathVariable Long id){
         missoesService.excluirMissoesPorId(id);
     }
 
