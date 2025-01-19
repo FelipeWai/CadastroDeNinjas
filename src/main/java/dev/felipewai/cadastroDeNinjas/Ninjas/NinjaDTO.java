@@ -1,6 +1,6 @@
 package dev.felipewai.cadastroDeNinjas.Ninjas;
 
-import dev.felipewai.cadastroDeNinjas.Missoes.Models.MissoesModel;
+import dev.felipewai.cadastroDeNinjas.Missoes.MissoesModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

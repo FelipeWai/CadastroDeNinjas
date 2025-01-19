@@ -1,10 +1,8 @@
-package dev.felipewai.cadastroDeNinjas.Missoes.Controller;
+package dev.felipewai.cadastroDeNinjas.Missoes;
 
 //LOCALHOST:8080/
 
 
-import dev.felipewai.cadastroDeNinjas.Missoes.Models.MissoesModel;
-import dev.felipewai.cadastroDeNinjas.Missoes.Services.MissoesService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,22 +18,22 @@ public class MissoesController {
     }
 
     @GetMapping("/listar")
-    public List<MissoesModel> listarMissoes(){
+    public List<MissoesDTO> listarMissoes(){
         return missoesService.listarMissoes();
     }
 
     @GetMapping("/listar/{id}")
-    public MissoesModel listarPorId(@PathVariable Long id){
+    public MissoesDTO listarPorId(@PathVariable Long id){
         return missoesService.listarPorId(id);
     }
 
     @PostMapping("/criar")
-    public MissoesModel criarMissao(@RequestBody MissoesModel missao){
+    public MissoesDTO criarMissao(@RequestBody MissoesDTO missao){
         return missoesService.criarMissao(missao);
     }
 
     @PutMapping("/atualizar/{id}")
-    public MissoesModel atualizarMissao(@PathVariable Long id, @RequestBody MissoesModel missao){
+    public MissoesDTO atualizarMissao(@PathVariable Long id, @RequestBody MissoesDTO missao){
         return missoesService.atualizarMissoesPorId(id, missao);
     }
 

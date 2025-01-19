@@ -1,4 +1,4 @@
-package dev.felipewai.cadastroDeNinjas.Missoes.Models;
+package dev.felipewai.cadastroDeNinjas.Missoes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.felipewai.cadastroDeNinjas.Ninjas.NinjaModel;
